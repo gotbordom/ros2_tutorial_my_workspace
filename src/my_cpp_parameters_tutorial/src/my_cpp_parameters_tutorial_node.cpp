@@ -68,8 +68,16 @@ public:
     // - etc?
     RCLCPP_INFO(this->get_logger(), "Hello %s!", my_param.c_str());
 
+    // NOTE: So this would basically allow me to change a param once. Then it goes back to default
+    // Good for on demand changes?
+    // std::vector<rclcpp::Parameter> all_new_parameters{
+    //     rclcpp::Parameter("my_parameter", "world")};
+    // this->set_parameters(all_new_parameters);
+
+    // NOTE: Whereas this allows me to change a param once and it Becomes the default.
+    // Good for launch file params
     std::vector<rclcpp::Parameter> all_new_parameters{
-        rclcpp::Parameter("my_parameter", "world")};
+        rclcpp::Parameter("my_parameter", my_param)};
     this->set_parameters(all_new_parameters);
   }
 
