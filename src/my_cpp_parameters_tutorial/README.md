@@ -20,6 +20,7 @@ Step three: adjust parameters and you choose
 - `ros2 param set /name_of_node name_of_parameter value`
 
 Step four: Launch files
-
+- You can also create a lauch file that will set the value for you. See the launch.py file in Launch directory.
+- `ros2 launch my_cpp_parameters_tutorial_launch my_minimal_param_node`
 
 Cool! so this did what I hoped it would!
